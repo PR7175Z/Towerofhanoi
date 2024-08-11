@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     // const initialstate = fchild;
 
-    // console.log(initialstate);
+    // function wincheck(initialstate = fchild){
+    //     console.log(initialstate)
+    // }
 
     // const lchild = root.children[2];
     // lchild.addEventListener('change', ()=>{
@@ -31,18 +33,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
             });
 
             diskval = disks[i].innerHTML;
-            disks[i].setAttribute('data-state', 'clicked');
-            console.log(disks[i].innerHTML);
+
+            //check if current item is at the top
+            if(disks[i].parentNode.children[0] === disks[i]){
+                disks[i].setAttribute('data-state', 'clicked');
+            }
+            // console.log(disks[i].innerHTML);
         });
     }
 
+
+    const firsttower = root.children[0];
+    const lchild = root.children[2];
     const tower = document.querySelectorAll('#root .tower');
 
     for(let i = 0; i<tower.length; i++){
         tower[i].addEventListener('click', () => {
-            // if(!tower[i].hasChildNodes()){
-            //     return;
-            // }
             let p = document.querySelector('[data-state="clicked"]');
             let firstchild = tower[i].querySelector('p');
             if(p){
@@ -51,6 +57,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     p.removeAttribute('data-state');
                 }
             }
+            
+            // if(root.children[2] ==  initialstate){
+            //     console.log('win')
+            // }
+            console.log(firsttower)
+            console.log(lchild)
+
         });
     }
 
