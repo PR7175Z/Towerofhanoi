@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         fchild.appendChild(p);
     }
 
-    const initialstate = fchild;
+    // const initialstate = fchild;
 
-    console.log(initialstate);
+    // console.log(initialstate);
 
-    const lchild = root.children[2];
-    lchild.addEventListener('change', ()=>{
-        console.log('check');
-    });
+    // const lchild = root.children[2];
+    // lchild.addEventListener('change', ()=>{
+    //     console.log('check');
+    // });
     // console.log(lchild);
 
     let diskval;
