@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
 
-    const firsttower = root.children[0];
+    const firsttower = root.children[0].innerHTML;
     const lchild = root.children[2];
     const tower = document.querySelectorAll('#root .tower');
 
@@ -58,11 +58,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 }
             }
             
-            // if(root.children[2] ==  initialstate){
-            //     console.log('win')
-            // }
-            console.log(firsttower)
-            console.log(lchild)
+            if(firsttower ==  lchild.innerHTML){
+                document.getElementById('result').innerHTML = 'You Win'
+                console.log('win')
+            }
 
         });
     }
