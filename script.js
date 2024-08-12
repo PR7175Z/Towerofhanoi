@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         fchild.appendChild(p);
     }
 
+    const formwrap = document.querySelector('.form-wrapper');
+
+    document.getElementById('sizeForm').addEventListener('submit', (e)=>{
+        e.preventDefault();
+        formwrap.style.display = 'none';
+        root.style.display = 'block';
+    })
+
     // const initialstate = fchild;
 
     // function wincheck(initialstate = fchild){
