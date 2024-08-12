@@ -6,13 +6,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="root">
-        <div class="tower"></div>
-        <div class="tower"></div>
-        <div class="tower"></div>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="title">Number of Disks</div>
+            <form id="sizeForm">
+                <input type="text" name="diskcount" placeholder="Enter number of Disks">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    
+        <div id="root" style="display: none;">
+            <div class="tower"></div>
+            <div class="tower"></div>
+            <div class="tower"></div>
+        </div>
+    
+        <div id = "result"></div>
     </div>
-
-    <div id = "result"></div>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
