@@ -1,11 +1,11 @@
-#root{
+.container{
     max-width: 100%;
     width:800px;
     margin: 0 auto;
 }
 .tower{
     width: 10px;
-    height: 100px;
+    min-height: 100px;
     border: 2px solid #000;
     display: inline-block;
     margin: 50px;
