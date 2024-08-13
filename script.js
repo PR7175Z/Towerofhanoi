@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const root = document.getElementById('root');
-
     const formwrap = document.querySelector('.form-wrapper');
     const movecounter = document.querySelector('.movecounter');
     const movecountdown = document.getElementById('movecount');
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             let p = document.createElement('p');
             p.setAttribute('data-value', j);
             p.style.background = 'red';
-            p.style.width = (j*10+20)+'px';
+            p.style.width = (j*8+50)+'px';
             p.style.minHeight = '15px';
             fchild.appendChild(p);
         }
