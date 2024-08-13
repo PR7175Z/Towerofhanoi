@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         for(let j = 0; j<size;j++){
             let p = document.createElement('p');
-            p.innerHTML = j;
+            p.setAttribute('data-value', j);
+            // p.innerHTML = j;
             p.style.background = 'red';
             p.style.width = (j*4+20)+'px';
+            p.style.minHeight = '20px';
             fchild.appendChild(p);
         }
 
@@ -31,7 +33,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     disk.removeAttribute('data-state');
                 });
 
-                diskval = disks[i].innerHTML;
+                diskval = disks[i].getAttribute('data-value');
 
                 //check if current item is at the top
                 if(disks[i].parentNode.children[0] === disks[i]){
@@ -51,20 +53,24 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 let p = document.querySelector('[data-state="clicked"]');
                 let firstchild = tower[i].querySelector('p');
                 if(p){
-                    if(firstchild == null || p.innerHTML < firstchild.innerHTML){
+                    if(firstchild == null || p.getAttribute('data-value') < firstchild.getAttribute('data-value')){
                         tower[i].prepend(p);
                         p.removeAttribute('data-state');
                     }
                 }
                 
                 if(firsttower ==  lchild.innerHTML){
-                    document.getElementById('result').innerHTML = 'You Win';
+                    document.getElementById('status-message').innerHTML = 'You Win';
+                    document.getElementById('result').style.display = 'block';
                 }
 
             });
         }
     })
 
+    document.querySelector('.cross').addEventListener('click', () => {
+        window.location.reload();
+    })
     // const initialstate = fchild;
 
     // function wincheck(initialstate = fchild){
