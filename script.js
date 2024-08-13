@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         movecounter.style.display = 'block';
         size = document.querySelector('input[name="diskcount"]').value;
 
+        let towerHeight = 0;
         let movetheshold = (2**size) -1;
         movecountdown.innerHTML = movetheshold;
 
@@ -21,8 +22,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
             p.style.background = 'red';
             p.style.width = (j*8+50)+'px';
             p.style.minHeight = '15px';
+            p.style.bottom = (size - (j+1)) * 25 + 'px';
             fchild.appendChild(p);
+            towerHeight = towerHeight + 15 + 10; 
         }
+
+        let towerElement = document.querySelector('.tower');
+        towerElement.style.height = towerHeight + 20 + 'px';
 
         let diskval;
         const disks = document.querySelectorAll('.tower p');
