@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
                         movecountdown.innerHTML = movetheshold;
                         if(movetheshold < 0){
                             document.getElementById('status-message').innerHTML = 'You Loose';
+                            root.style.display = 'none';
+                            movecounter.style.display = 'none';
+                            document.getElementById('result').style.display = 'block';
                         }
                     }
                 }
