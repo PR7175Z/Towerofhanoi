@@ -29,6 +29,9 @@ form input:not([type]), input[type="submit"]:hover{
     width:800px;
     margin: 0 auto;
 }
+
+/*Tower*/
+
 .tower{
     width: 10px;
     min-height: 100px;
@@ -36,12 +39,18 @@ form input:not([type]), input[type="submit"]:hover{
     display: inline-block;
     margin: 50px;
     min-width: 10px;
+    position: relative;
+    z-index: 0;
 }
 
 .tower p{
     border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    bottom: calc(attr(data-value) * 20px);
 }
-
 .tower p[data-state="clicked"]{
     border: 1px solid #000;
 }
