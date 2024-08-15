@@ -9,3 +9,4 @@
   <li>Only the disk at the top of a stack can be moved.</li>
   <li>A disk cannot be placed on top of another disk with a smaller diameter.</li>
 </ul>
+![Screenshot 2024-08-15 060542](https://github.com/user-attachments/assets/51b419b2-6908-4181-a7e9-bdff76c61959)
