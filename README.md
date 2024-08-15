@@ -9,4 +9,6 @@
   <li>Only the disk at the top of a stack can be moved.</li>
   <li>A disk cannot be placed on top of another disk with a smaller diameter.</li>
 </ul>
-<img src="https://github.com/user-attachments/assets/51b419b2-6908-4181-a7e9-bdff76c61959" alt="toh">
+<h3>Images</h3>
+<img src="https://github.com/user-attachments/assets/51b419b2-6908-4181-a7e9-bdff76c61959" alt="toh-form">
+<img src="https://github.com/user-attachments/assets/04f65891-811f-4da7-8c10-15a28eb742d5" alt="toh-game">
